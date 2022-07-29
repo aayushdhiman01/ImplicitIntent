@@ -1,7 +1,6 @@
 package com.aayush.implicitintent
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
@@ -35,7 +34,8 @@ class MainActivity : AppCompatActivity() {
 //        startActivity(Intent.createChooser(emailIntent, "Send mail using..."))
 //        --------------------------------------------------------------------------
 //                OPENING MESSAGES APP
-        val sendIntent = Intent(Intent.ACTION_VIEW)
-        sendIntent.data = Uri.parse("sms:")
+        val intent = Intent(Intent.ACTION_MAIN)
+        intent.addCategory(Intent.CATEGORY_APP_MESSAGING)
+        startActivity(intent)
     }
 }
