@@ -40,9 +40,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(emailIntent, "Send mail using..."))
         }
         binding.messages.setOnClickListener {
-//            val intent = Intent(Intent.ACTION_MAIN)
-//            intent.addCategory(Intent.CATEGORY_APP_MESSAGING)
-//            startActivity(intent)
             val intent = Intent(Intent.ACTION_SENDTO)
             intent.data = Uri.parse("sms:9876543210")
             startActivity(intent)
