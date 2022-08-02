@@ -19,16 +19,9 @@ class MainActivity : AppCompatActivity() {
             intent.setData(Uri.parse("http://www.google.com"))
             startActivity(intent)
         }
-//        ---------------------------------
-//        ---------SHARING TEXT WITH APPS ------------------------
-        binding.email.setOnClickListener {
-            val intent = Intent(Intent.ACTION_SEND)
-            intent.type = "text/plain"
-            intent.putExtra(Intent.EXTRA_SUBJECT, "My application name")
-            intent.putExtra(Intent.EXTRA_TEXT, "This is my text")
-            startActivity(Intent.createChooser(intent, "choose one"))
-        }
-//        -------------------------------------------------------------
+
+
+
 //        ------------------OPENING WITH DIAL---------------------------
         binding.dial.setOnClickListener {
             val phone = "+1234567890"
