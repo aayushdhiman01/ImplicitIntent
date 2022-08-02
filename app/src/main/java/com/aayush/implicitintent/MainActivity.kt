@@ -34,10 +34,7 @@ class MainActivity : AppCompatActivity() {
             val phone = "+1234567890"
             val intent = Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null))
             startActivity(intent)
-//            val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "Your Phone_number"))
-//            startActivity(intent)
-//            var intent = Intent(Intent.ACTION_DIAL)
-//            startActivity(intent)
+
         }
 //        ----------------OPENING EMAIL----------------------
         binding.email.setOnClickListener {
